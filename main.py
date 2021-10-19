@@ -4,7 +4,6 @@ import re
 import os
 import time
 from colorama import Fore, Style
-import smtplib
 from bs4 import BeautifulSoup
 from datetime import timedelta, datetime
 
