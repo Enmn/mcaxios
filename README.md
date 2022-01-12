@@ -3,9 +3,9 @@
 <p align="center">
     <b>MCSG Framework</b><br>
     <br>
-    <a href="https://www.codefactor.io/repository/github/entysec/ghost"><img src="https://img.shields.io/static/v1?label=Python&message=3.10.1&color=informational" alt="CodeFactor"/> <img src="https://img.shields.io/static/v1?label=GitHub&message=3.1&color=white" alt="CodeFactor"> </a><br>
+    <img src="https://img.shields.io/static/v1?label=Python&message=3.10.1&color=informational" alt="CodeFactor"/> <img src="https://img.shields.io/static/v1?label=GitHub&message=3.1&color=white" alt="CodeFactor"> <br>
     <br>
-    MCSG Framework It is a tool written in the Python language, a tool that collects skins from sites, and this is optional. We currently have limited sites. The tool makes a package of skins for me, a copy of Minecraft Bedrock. The tool took a few weeks, and I hope that the project will like it!
+    MCSG Framework It is a tool written in the Python language, a tool that collects skins from sites, and this is optional. We currently have limited sites. The tool makes a   package of skins for me, a copy of Minecraft Bedrock. The tool took a few weeks, and I hope that the project will like it!
     <br>
     <br>
     <br>
