@@ -11,5 +11,5 @@
     <br>
     <b>Installation</b><br>
     <br>
-    <code>git clone https://github.com/WHITE71wolf/Minecraft-Generator-Skins</code>
+    <code>git clone https://github.com/Enmn/MCSG</code>
 </p>
