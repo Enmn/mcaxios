@@ -1,14 +1,17 @@
-import random
 import requests
 import re
+import random
 import os
+import uuid
 import time
-from colorama import Fore, Style
-from bs4 import BeautifulSoup
-from datetime import timedelta, datetime
+try:
+    from bs4 import BeautifulSoup
+    from yachalk import chalk
+except ImportError:
+    os.system("sudo pip3 install yachalk")
+    os.system("sudo pip3 install bs4")
 
 
-green_color = "\033[1;93m"
 
 def close():
     if os.name == 'nt':
@@ -17,148 +20,141 @@ def close():
         os.system('clear')
 
 
+
 close()
-
-os.system("python update.py")
-
-start = input(green_color + """ 
-
-  ███▄ ▄███▓ ██▓ ███▄    █ ▓█████  ▄████▄   ██▀███   ▄▄▄        █████▒▄▄▄█████▓
- ▓██▒▀█▀ ██▒▓██▒ ██ ▀█   █ ▓█   ▀ ▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▓██   ▒ ▓  ██▒ ▓▒
- ▓██    ▓██░▒██▒▓██  ▀█ ██▒▒███   ▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ▒████ ░ ▒ ▓██░ ▒░
- ▒██    ▒██ ░██░▓██▒  ▐▌██▒▒▓█  ▄ ▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██ ░▓█▒  ░ ░ ▓██▓ ░
- ▒██▒   ░██▒░██░▒██░   ▓██░░▒████▒▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒░▒█░      ▒██▒ ░
- ░ ▒░   ░  ░░▓  ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒ ░      ▒ ░░
- ░  ░      ░ ▒ ░░ ░░   ░ ▒░ ░ ░  ░  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░ ░          ░
-                           
-   ██████  ██ ▄█▀ ██▓ ███▄    █
- ▒██    ▒  ██▄█▒ ▓██▒ ██ ▀█   █
- ░ ▓██▄   ▓███▄░ ▒██▒▓██  ▀█ ██▒
-   ▒   ██▒▓██ █▄ ░██░▓██▒  ▐▌██▒
- ▒██████▒▒▒██▒ █▄░██░▒██░   ▓██░
- ▒ ▒▓▒ ▒ ░▒ ▒▒ ▓▒░▓  ░ ▒░   ▒ ▒
-
-\t[developer] - WHITE71wolf
-
-
-(1) - (Beta) minecraft.novaskin.me   (4) - (Beta) skinsmc.org    
-(2) - (Beta) mskins.net              (5) - Exit
-(3) - (Beta) nicemarkmc.com
-> """)
+# Setting
+print(chalk.red.bold("""
+                      ████     ████                        
+                     ░██░██   ██░██                  █████   
+                     ░██░░██ ██ ░██  █████   ██████ ██░░░██
+                     ░██ ░░███  ░██ ██░░░██ ██░░░░ ░██  ░██
+                     ░██  ░░█   ░██░██  ░░ ░░█████ ░░██████
+                     ░██   ░    ░██░██   ██ ░░░░░██ ░░░░░██
+                     ░██        ░██░░█████  ██████   █████ 
+                     ░░         ░░  ░░░░░  ░░░░░░   ░░░░░ 
+"""))
+print(chalk.green.bold("Thank you very much for installing the tool, We wish you a beautiful"))
+print(chalk.green.bold('\tFollow me on my GitHub account!'))
+print(chalk.green.bold.underline('  GitHub: https://github.com/Enmn'))
+one = input(chalk.bold("\n\nPress 1 To Start Random Skins Minecraft\nPress 2 To Minecraft Skin Stealer\n"))
+if one == "2":
+    os.system('python3 stealer.py')
+    exit()
 
 
 
 
-if start == "1" or start == "2" or start == "3" or start == "4":
-    if not os.path.exists('image'):
-        os.mkdir('image')
-    else:    
-        pass
 
-DIR = "image"
+
+
+divisor = 5
+DIR = "Skins"
+session = requests.Session()
 headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36'}
 
-# download and save skin 
-def save(url, file=None):
-    res = requests.get(url, headers=headers)
-    if not file:
-        if res.headers.get('content-disposition'):
-            d = res.headers.get('content-disposition')
-            fname = str(re.findall("filename=(.+)", d)[0]).replace('"','')
-            with open(f'./image/{fname}', 'wb') as file:
-                for data in res.iter_content(chunk_size=8192):
-                    file.write(data)
-    else:
-        with open(f'./image/{file}.png', 'wb') as file:
-            for data in res.iter_content(chunk_size=8192):
-                file.write(data)
+
+
+def save(url):
+    res = session.get(url, headers=headers)
+    name = str(uuid.uuid4().hex)
+    with open(f'Skins/{name}' + '.png', 'wb') as f:
+        for data in res.iter_content(chunk_size=8192):
+            f.write(data)
 
 
 
-
-if start == "1":
-    close()
-    count = int(input(Style.NORMAL + Fore.RESET + "Enter Count: "))
-    close()
-    from_date = datetime.today()
-    while True:
-        url_content = "https://minecraft.novaskin.me/gallery/random/"
-        res = requests.get(url_content)
-        html = BeautifulSoup(res.text, "lxml")
-        s = html.find('a', {'class':'hovercard visible-xs-block'})['href']
-        data_id = s.split('/')[-1]
-        url = f'https://minecraft.novaskin.me/skin/{data_id}/download'
-        save(url, file=data_id)
-        from_date = from_date + timedelta(seconds=1)
-        print(from_date.strftime(f'[%H:%M:%S] [INFO]: Done ./image/{data_id}.png'))
-        file = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
-        if file == count:
-            exit()
+def checkForDir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
 
 
-if start == "2":
-    close()
-    count = int(input(Style.NORMAL + Fore.RESET + "Enter Count: "))
-    close()
-    from_date = datetime.today()
-    while True:
-        url = "https://mskins.net/en/skins/random"
-        response = requests.get(url)
-        html = BeautifulSoup(response.text, "html.parser")
-        p = html.find_all('a')
-        skin_id = str(p[39]['href']).split("/")[-1]
-        save(f"https://mskins.net/en/skin/{skin_id}/download")
-        from_date = from_date + timedelta(seconds=1)
-        print(from_date.strftime(f'[%H:%M:%S] [INFO]: Done ./image/{skin_id}.png'))
-        file = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
-        if file == count:
-            exit()
+while True:
+    List = ["1", "2", "3", "4"]
+    introduction = random.choice(List)
+    if introduction == "1" or introduction == "2" or introduction == "3" or introduction == "4" or introduction == "5":
+        checkForDir(DIR)
 
 
 
+    if introduction == "1":
+        allsite = []
+        l = "https://skinsmc.org/"
+        r = session.get(l)
+        soup = BeautifulSoup(r.content, "html.parser")
+        for link in soup.findAll('a', attrs={'href': re.compile("^/skin/")}):
+            allsite.append(link.get('href'))
+            del allsite[divisor:]
+        for urls in allsite:
+            url = 'https://skinsmc.org' + urls
+            res = session.get(url)
+            html = BeautifulSoup(res.content, "html.parser")
+            for download in html.findAll('a', attrs={'href': re.compile("^/textures/")}):
+                uri = 'https://skinsmc.org' + download.get('href')
+                save(uri)
+        
 
 
-if start == "3":
-    close()
-    count = int(input(Style.NORMAL + Fore.RESET + "Enter Count: "))
-    close()
-    from_date = datetime.today()
-    while True:
-        rands = random.randint(1, 1497791)
-        url = "https://cdn2.nicemarkmc.com/skins/64x64/" + str(rands) + ".png"
-        res = requests.get(url)
-        if res.status_code == 200:
-            save(url, file=str(rands))
-            from_date = from_date + timedelta(seconds=1)
-            print(from_date.strftime(f'[%H:%M:%S] [INFO]: Done ./image/{str(rands)}.png'))
-            file = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
-            if file == count:
-                exit()
+    if introduction == "2":
+        allsite = []
+        l = "https://mskins.net/en/skins/random"
+        r = session.get(l)
+        soup = BeautifulSoup(r.content, "html.parser")
+        for link in soup.findAll('a', attrs={'class':'skin_link', 'href': re.compile("^https:")}):
+            allsite.append(link.get('href'))
+            del allsite[divisor:]
+        for urls in allsite:
+            skinname = urls.split("/")[-1]
+            url = 'https://mskins.net/en/skin/' + skinname + '/download'
+            save(url)
+           
+    
+
+    if introduction == "3":
+        for i in range(divisor):
+            rands = random.randint(1, 1497791)
+            url = "https://cdn2.nicemarkmc.com/skins/64x64/" + str(rands) + ".png"
+            res = session.get(url)
+            save(url)
+           
+
+
+    if introduction == "4":
+        allsite = []
+        links = []
+        l = "https://www.minecraftiplist.com/skins/reshuffle/"
+        r = session.get(l)
+        soup = BeautifulSoup(r.content, "html.parser")
+        for link in soup.findAll('a', attrs={'href': re.compile("^/skinview/")}):
+            allsite.append(link.get('href'))
+            del allsite[divisor:]
+        for urls in allsite:
+            url = 'https://www.minecraftiplist.com' + urls
+            res = session.get(url)
+            html = BeautifulSoup(res.content, "html.parser")
+            for png in html.findAll('a', attrs={'href': re.compile("^https://mctexture2")}):
+                links.append(png.get('href'))
+        for All in links:
+            save(All)
 
 
 
-
-if start == "4":
-    close()
-    count = int(input(Style.NORMAL + Fore.RESET + "Enter Count: "))
-    close()
-    from_date = datetime.today()
-    while True:
-        url = "https://skinsmc.org/"
-        response = requests.get(url)
-        html = BeautifulSoup(response.text, "html.parser")
-        p = html.find_all('img')
-        skin_two = str(p[6]['src']).replace('/skinrender/','')[:2]
-        skin_name = str(p[6]['src']).replace('/skinrender/','')
-        save(url="https://skinsmc.org/textures/"+skin_two+"/"+skin_name, file=skin_name.replace('.png',''))
-        from_date = from_date + timedelta(seconds=1)
-        print(from_date.strftime(f'[%H:%M:%S] [INFO]: Done ./image/{skin_name}'))
-        file = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
-        if file == count:
-            exit()
-
-
-if start == "5":
-    close()
-    exit()
+    if introduction == "5":
+        allsite = []
+        links = []
+        l = 'https://mc-skins.com/'
+        r = session.get(l)
+        soup = BeautifulSoup(r.content, "html.parser")
+        for link in soup.findAll('a', attrs={'href': re.compile("^https:"), 'class':'_self cvplbd'}):
+            allsite.append(link.get('href'))
+            del allsite[5:]
+        for urls in allsite:
+            res = session.get(urls)
+            html = BeautifulSoup(res.content, "html.parser")
+            for png in html.findAll('div', attrs={'class':'nice-minecraft'}) or html.findAll('div', attrs={'class':'skin-previews-wrapper'}):
+                a = png.decode_contents().strip()
+                text = BeautifulSoup(a, "html.parser")
+            for img in text.findAll('img'):
+                links.append(img.get('src'))      
+        for All in links:
+            save(All)
