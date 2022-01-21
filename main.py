@@ -36,9 +36,11 @@ print(chalk.red.bold("""
 print(chalk.green.bold("Thank you very much for installing the tool, We wish you a beautiful"))
 print(chalk.green.bold('\tFollow me on my GitHub account!'))
 print(chalk.green.bold.underline('  GitHub: https://github.com/Enmn'))
-one = input(chalk.bold("\n\nPress 1 To Start Random Skins Minecraft\nPress 2 To Minecraft Skin Stealer\n"))
+one = input(chalk.bold("\n\nPress 1 To Start Random Skins Minecraft\nPress 2 To Minecraft Skin Stealer\nPress 3 To Exit\n"))
 if one == "2":
     os.system('python3 stealer.py')
+    exit()
+if one == "3":
     exit()
 
 
