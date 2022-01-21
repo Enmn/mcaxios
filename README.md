@@ -5,11 +5,13 @@
     <br>
     <img src="https://img.shields.io/static/v1?label=Python&message=3.10.1&color=informational" alt="Python Code"/> <img src="https://img.shields.io/static/v1?label=GitHub&message=3.1&color=white" alt="GitHub Version"> <br>
     <br>
-    MCSG Framework It is a tool written in the Python language, a tool that collects skins from sites, and this is optional. We currently have limited sites the tool makes a package of skins for me, a copy of Minecraft Bedrock. The tool took a few weeks, and I hope that the project will like it!
+    It is a tool that was written in the Python language, a tool that collects skins from some famous or not famous sites. The tool is in beta mode so that we can see people's opinions and receive their problems and errors that they face. The tool will be admired by many Minecraft players and also people who have a channel and publish skin packs. This tool will benefit them Really 'We wish you a beautiful, enjoyable and useful experience without any problems for me to use you
+    <br>
+    NOTE: We are not responsible for any damage that may occur to you or your use of the tool
     <br>
     <br>
     <br>
     <b>Installation</b><br>
     <br>
-    <code>git clone https://github.com/WHITE71wolf/Minecraft-Generator-Skins</code>
+    <code>git clone https://github.com/Enmn/MCSG</code>
 </p>
