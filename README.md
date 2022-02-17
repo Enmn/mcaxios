@@ -1,4 +1,4 @@
-<h3 align="center"><img src="https://e.top4top.io/p_2202bl5wi1.png" alt="logo" height="350px"></h3>
+<h3 align="center"><img src="https://e.top4top.io/p_2202bl5wi1.png" alt="logo" height="250px"></h3>
 
 <p align="center">
     <b>MCSG Framework</b><br>
