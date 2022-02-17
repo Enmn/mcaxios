@@ -1,4 +1,4 @@
-<h3 align="center"><img src="https://store4.gofile.io/download/cceedce5-2490-4e1c-ad08-09d321c0f920/maxresdefault_auto_x2-removebg.png" alt="logo" height="250px"></h3>
+<h3 align="center"><img src="https://up6.cc/2022/02/164513903200281.png" alt="logo" height="250px"></h3>
 
 <p align="center">
     <b>MCSG Framework</b><br>
