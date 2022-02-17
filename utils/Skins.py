@@ -3,17 +3,14 @@ import random
 import re
 import time
 import uuid
-
-import requests
-
 try:
+    import requests
     from bs4 import BeautifulSoup
     from yachalk import chalk
 except ImportError:
+    os.system("pip3 install requests")
     os.system("pip3 install yachalk")
     os.system("pip3 install bs4")
-
-
 
 def close():
     if os.name == 'nt':
@@ -23,6 +20,7 @@ def close():
 close()
 
 
+# File settings and changes
 divisor = 5
 DIR = "temp"
 session = requests.Session()
@@ -37,13 +35,9 @@ def save(url):
         for data in res.iter_content(chunk_size=8192):
             f.write(data)
 
-
-
 def checkForDir(path):
     if not os.path.exists(path):
         os.mkdir(path)
-
-
 
 while True:
     numberSites = ["1", "2", "3", "4"]
