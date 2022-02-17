@@ -29,5 +29,5 @@ print(("\t  Thank you very much for installing the tool, We wish you a beautiful
 print(('\t\t\tFollow me on my GitHub account!'.upper()))
 print(('        \t\tGitHub: '.upper()) + chalk.underline('https://github.com/Enmn'))
 one = input(chalk.bold("\nPress Enter if You Are Ready..."))
-os.system('python3 ./lib/utils/Generator.py')
+os.system('python3 ./utils/Skins.py')
 exit()
