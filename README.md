@@ -13,5 +13,5 @@
     <br>
     <b>Installation</b><br>
     <br>
-    <code>git clone https://github.com/Enmn/MCSG</code>
+    <code>git clone https://github.com/Enmn/Mcskins</code>
 </p>
