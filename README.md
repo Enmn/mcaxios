@@ -11,5 +11,5 @@
     <br>
     <b>Installation</b><br>
     <br>
-    <code>git clone https://github.com/Enmn/Mcskins</code>
+    <code>git clone https://github.com/Enmn/mcaxios</code>
 </p>
