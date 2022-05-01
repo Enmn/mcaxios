@@ -1,7 +1,7 @@
 <h3 align="center"><img src="https://up6.cc/2022/02/164513903200281.png" alt="logo" height="250px"></h3>
 
 <p align="center">
-    <b>Mcskins</b><br>
+    <b>Mcaxios</b><br>
     <br>
     <img src="https://img.shields.io/static/v1?label=Python&message=3.10.1&color=informational" alt="Python Code"/> <img src="https://img.shields.io/static/v1?label=GitHub&message=3.1&color=white" alt="GitHub Version"> <br>
     <br>
