@@ -1,13 +1,14 @@
 <p align="center">
 <b>Mcaxios</b><br>
-Today you can use some specialized Minecraft tools to do some services
-<a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
-<a target="_blank" href="https://www.python.org/downloads/release/python-390/"><img src="https://img.shields.io/badge/Python-3.9-blue.svg"></a>
-<a target="_blank" href='.version'><img src="https://img.shields.io/badge/Release-1.2-orange"></a>
-<a target="_blank" href="https://github.com/Enmn"><img src="https://badgen.net/badge/GitHub/Developer/color?icon=github"></a>
-<a target="_blank" href="https://github.com/Enmn/mcaxios/stargazers/"><img src="https://img.shields.io/github/stars/Enmn/mcaxios.svg?style=social&label=Star&maxAge=2592000"></a>
-<br>
-<br>
+  <span>Today you can use some specialized Minecraft tools to do some services</span>
+  <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
+  <a target="_blank" href="https://www.python.org/downloads/release/python-390/"><img src="https://img.shields.io/badge/Python-3.9-blue.svg"></a>
+  <a target="_blank" href='.version'><img src="https://img.shields.io/badge/Release-1.2-orange"></a>
+  <a target="_blank" href="https://github.com/Enmn"><img src="https://badgen.net/badge/GitHub/Developer/color?icon=github"></a>
+  <a target="_blank" href="https://github.com/Enmn/mcaxios/stargazers/"><img src="https://img.shields.io/github/stars/Enmn/mcaxios.svg
+    style=social&label=Star&maxAge=2592000"></a>
+  <br>
+  <br>
 </p>
 
 ## Installation
