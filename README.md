@@ -1,6 +1,8 @@
+<h3 align="center">Mcaxios</h3>
+
 <p align="center">
-<b>Mcaxios</b><br>
   <span>Today you can use some specialized Minecraft tools to do some services</span>
+  <br>
   <br>
   <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
   <a target="_blank" href="https://www.python.org/downloads/release/python-390/"><img src="https://img.shields.io/badge/Python-3.9-blue.svg"></a>
@@ -11,8 +13,19 @@
   <br>
 </p>
 
-## Installation
-Now you need to install Git, and if you have Git, there is no need to download it again
+
+
+## Getting Started
+In order to work for you, you must follow these steps
+
+### Requirements
+1. You need to install Python, you can install it from [here](https://www.python.org)
+1. The size of both skins is 64x64<br/>
+2. The skins should be in PNG format<br/>
+3. Install the requirements in the file <code>requirements.txt</code>
+
+### Installation
+You need to install Git, and if you have Git, there is no need to download it again
 ```console
 $ sudo apt-get install git
 ```
@@ -29,13 +42,6 @@ After that you run the main file
 ```console
 $ python3 main.py
 ```
-
-
-## Requirements
-1. The size of both skins is 64x64<br/>
-2. The skins should be in PNG format<br/>
-3. Install the requirements in the file <code>requirements.txt</code>
-
 ## Contributor over time
 <img src="https://contributor-overtime-api.git-contributor.com/contributors-svg?chart=contributorOverTime&repo=Enmn/mcaxios" alt='starts'>
 
